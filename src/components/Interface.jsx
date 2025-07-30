@@ -36,9 +36,7 @@ export const Interface = (props) => {
     const { setSection } = props;
     return (
         <div className="flex flex-col items-center w-screen">
-            <div className="mr-60">
-                <AboutSection setSection={setSection} />
-            </div>
+            <AboutSection setSection={setSection} />
             <SkillsSection />
             <ProjectsSection />
             <MoreSection />
@@ -51,15 +49,13 @@ const AboutSection = (props) => {
     const { setSection } = props;
     return (
         <Section mobileTop>
-            <div className="flex">
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0 mr-15">
-                    Hi, I'm
-                    <br />
-                    <p className="bg-white px-1 italic mt-3">Matheo Bertin</p>
-                </h1>
-            </div>
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-snug mt-8 md:mt-0">
+                Hi, I'm
+                <br />
+                <p className="bg-white px-1 italic">Matheo Bertin</p>
+            </h1>
             <motion.p
-                className="text-lg text-gray-600 mt-4"
+                className="text-lg text-gray-800 mt-4 max-w-md" 
                 initial={{
                     opacity: 0,
                     y: 25,
@@ -73,7 +69,7 @@ const AboutSection = (props) => {
                     delay: 1.5,
                 }}
             >
-                I'm currently a data engineering apprentice in the French Navy <br /> and a student at ISEN
+                I'm currently a data engineering apprentice in the French Navy and a student at ISEN
             </motion.p>
             <motion.button
                 onClick={() => setSection(3)}
@@ -400,7 +396,7 @@ const MoreSection = () => {
     };
 
     return (
-        <div className="relative flex">
+        <div className="flex w-full h-full gap-8 items-center justify-center">
             {/* Barre verticale à gauche */}
             <div className="fixed left-64 mt-96 z-10 flex flex-col gap-4">
                 {timelineItems.map((_, idx) => (
