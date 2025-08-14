@@ -345,7 +345,7 @@ const ContactSection = () => {
 // Données des sections
 const timelineItems = [
     {
-        title: "About Me",
+        title: "Who am I",
         text: "To be simple, I'm a 20 years old French student, who loves to code and learn new things. I'm currently studying computer science and working on various personal projects. I have a passion for web development and enjoy working with the latest technologies. In my free time, I like to look at open-source projects and explore new programming languages. I'm always looking for new challenges and opportunities to grow as a developer.",
     },
     {
@@ -398,7 +398,7 @@ const MoreSection = () => {
     return (
         <div className="flex w-full h-full gap-8 items-center justify-center">
             {/* Barre verticale à gauche */}
-            <div className="fixed left-64 mt-96 z-10 flex flex-col gap-4">
+            <div className="fixed left-64 z-10 flex flex-col gap-4">
                 {timelineItems.map((_, idx) => (
                     <div
                         key={idx}
